@@ -5,7 +5,7 @@ class DebugSolution extends RabbitHoleSolution {
     const rows = 3, columns = 4;
     const digging_moves = 'DRDLDRRUURDD';
     const moves = digging_moves.toUpperCase();
-    
+
     // Initialize cells
     const cells = Array.from({ length: rows }, () =>
       Array.from({ length: columns }, () => ({ top: true, bottom: true, left: true, right: true }))
@@ -51,7 +51,7 @@ class DebugSolution extends RabbitHoleSolution {
       visited[nr][nc] = true;
       cur = { r: nr, c: nc };
     }
-    
+
     // Check connector at row=1, col=2
     const row = 1, col = 2;
     console.log('Checking connector at position (1, 2)');
@@ -59,25 +59,25 @@ class DebugSolution extends RabbitHoleSolution {
     console.log('Top-right cell (0,2):', cells[0][2]);
     console.log('Bottom-left cell (1,1):', cells[1][1]);
     console.log('Bottom-right cell (1,2):', cells[1][2]);
-    
+
     // Check each direction
     let hasTop = false, hasBottom = false, hasLeft = false, hasRight = false;
     if (row > 0 && col > 0 && cells[row - 1][col - 1].right) hasTop = true;
     if (row > 0 && col < columns && cells[row - 1][col].left) hasTop = true;
     console.log('hasTop:', hasTop, '(need right of (0,1) OR left of (0,2))');
-    
+
     if (row < rows && col > 0 && cells[row][col - 1].right) hasBottom = true;
     if (row < rows && col < columns && cells[row][col].left) hasBottom = true;
     console.log('hasBottom:', hasBottom, '(need right of (1,1) OR left of (1,2))');
-    
+
     if (row > 0 && col > 0 && cells[row - 1][col - 1].bottom) hasLeft = true;
     if (row < rows && col > 0 && cells[row][col - 1].top) hasLeft = true;
     console.log('hasLeft:', hasLeft, '(need bottom of (0,1) OR top of (1,1))');
-    
+
     if (row > 0 && col < columns && cells[row - 1][col].bottom) hasRight = true;
     if (row < rows && col < columns && cells[row][col].top) hasRight = true;
     console.log('hasRight:', hasRight, '(need bottom of (0,2) OR top of (1,2))');
-    
+
     const connector = this._getUnicodeConnector(cells, row, col, rows, columns);
     console.log('Connector character:', connector);
     console.log('Expected: ┃ (vertical line)');
@@ -85,3 +85,4 @@ class DebugSolution extends RabbitHoleSolution {
 }
 
 new DebugSolution().testConnector();
+
