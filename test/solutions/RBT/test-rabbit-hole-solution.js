@@ -23,7 +23,22 @@ describe("RBT challenge: draw empty ground", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(1, 4), expected);
   });
 
+  it("should draw the given 3x4", function () {
+    const expected =
+`+---+---+---+---+
+|   |   |   |   |
++---+---+---+---+
+|   |   |   |   |
++---+---+---+---+
+|   |   |   |   |
++---+---+---+---+
+`
+    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4), expected);
+  });
+
+
 });
+
 
 
 
