@@ -7,8 +7,8 @@ describe("RBT challenge: room creation", function () {
     const rows = 2;
     const columns = 2;
     // Moves: enter (D), then loop to dig all cells
-    // D R U L D (loop)
-    const moves = "DRULD";
+    // D R D L U R D (to visit all 4 cells)
+    const moves = "DRDLURD";
     const expected =
       "+   +---+\n" +
       "|       |\n" +
