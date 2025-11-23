@@ -33,6 +33,21 @@ describe("RBT challenge: room creation", function () {
       "+---+---+---+\n";
     assert.equal(new RabbitHoleSolution().rabbit_hole(rows, columns, moves), expected);
   });
+
+  it("should render a 2x3 room with central pillars removed", function () {
+    const rows = 2;
+    const columns = 3;
+    // Moves to dig through all internal walls of 2x3 grid
+    const moves = "DDRURDRULLLDRRR";
+    const expected =
+      "+   +---+---+---+\n" +
+      "|               |\n" +
+      "+               +\n" +
+      "|               |\n" +
+      "+---+---+---+---+\n";
+    assert.equal(new RabbitHoleSolution().rabbit_hole(rows, columns, moves), expected);
+  });
 });
+
 
 
