@@ -52,7 +52,7 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
 |           |   |
 +---+---+---+---+
 `;
-    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 3, digging, {}), expected);
+    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, {}), expected);
   });
 
   it("should render with explicit default scale (3x1)", function () {
@@ -68,7 +68,7 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
 |           |   |
 +---+---+---+---+
 `;
-    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 3, digging, options), expected);
+    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
   });
 
   it("should render with horizontal scale 6 and vertical scale 2", function () {
@@ -87,7 +87,7 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
 |                    |      |
 +------+------+------+------+
 `;
-    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 3, digging, options), expected);
+    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
   });
 
   it("should render with horizontal scale 5 and vertical scale 3", function () {
@@ -136,4 +136,3 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
   });
 });
-

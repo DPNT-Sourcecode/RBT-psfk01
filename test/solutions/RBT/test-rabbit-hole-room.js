@@ -48,7 +48,3 @@ describe("RBT challenge: room creation", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(rows, columns, moves), expected);
   });
 });
-
-
-
-
