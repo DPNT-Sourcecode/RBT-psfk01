@@ -122,18 +122,19 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
 
   it("should handle rooms with custom scale", function () {
     // Create a 2x2 room with custom scale - need to visit all 4 cells
-    const digging = "DRDLDR";
+    const digging = "DRDLU";
     const options = { HORIZONTAL_SCALE: "4", VERTICAL_SCALE: "2" };
     const expected =
 `+    +----+
-|          |
-|          |
-+          +
-|          |
-|          |
+|         |
+|         |
++         +
+|         |
+|         |
 +----+----+
 `;
     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
   });
 });
+
 
