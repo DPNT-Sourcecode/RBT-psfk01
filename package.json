@@ -1,0 +1,39 @@
+{
+  "name": "tdl-warmup",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Warmup code to bootstrap the challenge",
+  "scripts": {
+    "start": "node ./lib/send_command_to_server.js",
+    "test": "node --test test/**/*.js",
+    "coverage": "node -e \"require('node:fs').mkdirSync('coverage',{recursive:true});\" && (node --test --experimental-test-coverage --test-reporter=tap --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info test/**/*.js || true) && node ./scripts/coverage-summary-from-lcov.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianghionoiu/tdl-warmup.git"
+  },
+  "dependencies": {
+    "properties-reader": "~2.3.0",
+    "tdl-client-nodejs": "0.32.1"
+  },
+  "devDependencies": {
+    "diveSync": "~0.3.0",
+    "prettier": "~3.6.2"
+  },
+  "engines": {
+    "node": ">=22.14.0",
+    "npm": ">=11.2.0"
+  },
+  "keywords": [
+    "tdl",
+    "befaster"
+  ],
+  "author": "Julian Ghionoiu",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/io-accelerate/tdl-runner-nodejs/issues"
+  },
+  "homepage": "https://github.com/io-accelerate/tdl-runner-nodejs#readme"
+}
