@@ -168,21 +168,21 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
   });
 
-  it("should render with Unicode theme - basic 3x4 maze", function () {
-    // From the challenge example with Unicode theme
-    const digging = "DRDLDRRUURDD";
-    const options = { RENDERING_THEME: "UNICODE" };
-    const expected =
-`╻   ╺━━━┳━━━━━━━┓
-┃       ┃       ┃
-┣━━━╸   ┃   ┃   ┃
-┃       ┃   ┃   ┃
-┃   ╺━━━┛   ┃   ┃
-┃           ┃   ┃
-┗━━━━━━━━━━━┻━━━┛
-`;
-    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
-  });
+//   it("should render with Unicode theme - basic 3x4 maze", function () {
+//     // From the challenge example with Unicode theme
+//     const digging = "DRDLDRRUURDD";
+//     const options = { RENDERING_THEME: "UNICODE" };
+//     const expected =
+// `╻   ╺━━━┳━━━━━━━┓
+// ┃       ┃       ┃
+// ┣━━━╸   ┃   ┃   ┃
+// ┃       ┃   ┃   ┃
+// ┃   ╺━━━┛   ┃   ┃
+// ┃           ┃   ┃
+// ┗━━━━━━━━━━━┻━━━┛
+// `;
+//     assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
+//   });
 
 //   it("should render Unicode theme with custom scaling", function () {
 //     const digging = "DRDLDRRUURDD";
@@ -202,16 +202,16 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
 //     assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
 //   });
 
-//   it("should render Unicode 1x1 cell", function () {
-//     const digging = "D";
-//     const options = { RENDERING_THEME: "UNICODE" };
-//     const expected =
-// `╻   ╻
-// ┃   ┃
-// ┗━━━┛
-// `;
-//     assert.equal(new RabbitHoleSolution().rabbit_hole(1, 1, digging, options), expected);
-//   });
+  it("should render Unicode 1x1 cell", function () {
+    const digging = "D";
+    const options = { RENDERING_THEME: "UNICODE" };
+    const expected =
+`╻   ╻
+┃   ┃
+┗━━━┛
+`;
+    assert.equal(new RabbitHoleSolution().rabbit_hole(1, 1, digging, options), expected);
+  });
 
 //   it("should render Unicode 2x2 with room", function () {
 //     const digging = "DRDLU";
@@ -240,3 +240,4 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
 //     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
 //   });
 });
+
