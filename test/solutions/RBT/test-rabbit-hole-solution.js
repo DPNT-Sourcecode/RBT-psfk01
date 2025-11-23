@@ -213,18 +213,18 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(1, 1, digging, options), expected);
   });
 
-//   it("should render Unicode 2x2 with room", function () {
-//     const digging = "DRDLU";
-//     const options = { RENDERING_THEME: "UNICODE" };
-//     const expected =
-// `╻   ╺━━━┓
-// ┃       ┃
-// ┃       ┃
-// ┃       ┃
-// ┗━━━━━━━┛
-// `;
-//     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
-//   });
+  it("should render Unicode 2x2 with room", function () {
+    const digging = "DRDLU";
+    const options = { RENDERING_THEME: "UNICODE" };
+    const expected =
+`╻   ╺━━━┓
+┃       ┃
+┃       ┃
+┃       ┃
+┗━━━━━━━┛
+`;
+    assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
+  });
 
 //   it("should render Unicode with single-arm connectors", function () {
 //     // Simple L-shape to test various connectors
@@ -240,4 +240,5 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
 //     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
 //   });
 });
+
 
