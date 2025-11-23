@@ -15,14 +15,15 @@ describe("RBT challenge: draw empty ground", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(1, 1), expected);
   });
 
-//   it("should draw 3x4", function () {
-//     const expected =
-//       "+---+---+---+---+\n" +
-//       "+   +   +   +   +\n" +
-//       "+---+---+---+---+\n"
-//     assert.equal(new RabbitHoleSolution().rabbit_hole(1, 1), expected);
-//   });
+  it("should draw 1x4", function () {
+    const expected =
+      "+---+---+---+---+\n" +
+      "|   |   |   |   |\n" +
+      "+---+---+---+---+\n"
+    assert.equal(new RabbitHoleSolution().rabbit_hole(1, 4), expected);
+  });
 
 });
+
 
 
