@@ -10,9 +10,19 @@ describe("RBT challenge: draw empty ground", function () {
   it("should draw 1x1", function () {
     const expected =
       "+---+\n" +
-      "+   +\n" +
+      "|   |\n" +
       "+---+\n"
     assert.equal(new RabbitHoleSolution().rabbit_hole(1, 1), expected);
   });
+
+//   it("should draw 3x4", function () {
+//     const expected =
+//       "+---+---+---+---+\n" +
+//       "+   +   +   +   +\n" +
+//       "+---+---+---+---+\n"
+//     assert.equal(new RabbitHoleSolution().rabbit_hole(1, 1), expected);
+//   });
+
 });
+
 
