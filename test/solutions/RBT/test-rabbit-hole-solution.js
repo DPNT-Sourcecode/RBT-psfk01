@@ -38,7 +38,3 @@ describe("RBT challenge: draw empty ground", function () {
 
 
 });
-
-
-
-
