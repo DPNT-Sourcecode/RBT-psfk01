@@ -168,39 +168,39 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
   });
 
-//   it("should render with Unicode theme - basic 3x4 maze", function () {
-//     // From the challenge example with Unicode theme
-//     const digging = "DRDLDRRUURDD";
-//     const options = { RENDERING_THEME: "UNICODE" };
-//     const expected =
-// `╻   ╺━━━┳━━━━━━━┓
-// ┃       ┃       ┃
-// ┣━━━╸   ┃   ┃   ┃
-// ┃       ┃   ┃   ┃
-// ┃   ╺━━━┛   ┃   ┃
-// ┃           ┃   ┃
-// ┗━━━━━━━━━━━┻━━━┛
-// `;
-//     assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
-//   });
+  it("should render with Unicode theme - basic 3x4 maze", function () {
+    // From the challenge example with Unicode theme
+    const digging = "DRDLDRRUURDD";
+    const options = { RENDERING_THEME: "UNICODE" };
+    const expected =
+`╻   ╺━━━┳━━━━━━━┓
+┃       ┃       ┃
+┣━━━╸   ┃   ┃   ┃
+┃       ┃   ┃   ┃
+┃   ╺━━━┛   ┃   ┃
+┃           ┃   ┃
+┗━━━━━━━━━━━┻━━━┛
+`;
+    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
+  });
 
-//   it("should render Unicode theme with custom scaling", function () {
-//     const digging = "DRDLDRRUURDD";
-//     const options = { RENDERING_THEME: "UNICODE", HORIZONTAL_SCALE: "6", VERTICAL_SCALE: "2" };
-//     const expected =
-// `╻      ╺━━━━━━┳━━━━━━━━━━━━━┓
-// ┃             ┃             ┃
-// ┃             ┃             ┃
-// ┣━━━━━━╸      ┃      ┃      ┃
-// ┃             ┃      ┃      ┃
-// ┃             ┃      ┃      ┃
-// ┃      ╺━━━━━━┛      ┃      ┃
-// ┃                    ┃      ┃
-// ┃                    ┃      ┃
-// ┗━━━━━━━━━━━━━━━━━━━━┻━━━━━━┛
-// `;
-//     assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
-//   });
+  it("should render Unicode theme with custom scaling", function () {
+    const digging = "DRDLDRRUURDD";
+    const options = { RENDERING_THEME: "UNICODE", HORIZONTAL_SCALE: "6", VERTICAL_SCALE: "2" };
+    const expected =
+`╻      ╺━━━━━━┳━━━━━━━━━━━━━┓
+┃             ┃             ┃
+┃             ┃             ┃
+┣━━━━━━╸      ┃      ┃      ┃
+┃             ┃      ┃      ┃
+┃             ┃      ┃      ┃
+┃      ╺━━━━━━┛      ┃      ┃
+┃                    ┃      ┃
+┃                    ┃      ┃
+┗━━━━━━━━━━━━━━━━━━━━┻━━━━━━┛
+`;
+    assert.equal(new RabbitHoleSolution().rabbit_hole(3, 4, digging, options), expected);
+  });
 
   it("should render Unicode 1x1 cell", function () {
     const digging = "D";
@@ -226,19 +226,20 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
   });
 
-//   it("should render Unicode with single-arm connectors", function () {
-//     // Simple L-shape to test various connectors
-//     const digging = "DR";
-//     const options = { RENDERING_THEME: "UNICODE" };
-//     const expected =
-// `╻   ╺━━━┓
-// ┃       ┃
-// ┗━━━╸   ┃
-//     ┃   ┃
-//     ┗━━━┛
-// `;
-//     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
-//   });
+  it("should render Unicode with simple tunel", function () {
+    // Simple shape to test various connectors
+    const digging = "DRD";
+    const options = { RENDERING_THEME: "UNICODE" };
+    const expected =
+`╻   ╺━━━┓
+┃       ┃
+┣━━━┓   ┃
+┃   ┃   ┃
+┗━━━┻━━━┛
+`;
+    assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
+  });
 });
+
 
 
