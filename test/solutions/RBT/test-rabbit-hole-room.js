@@ -34,10 +34,10 @@ describe("RBT challenge: room creation", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(rows, columns, moves), expected);
   });
 
-  it("should render a 2x3 room with central pillars removed", function () {
+  it("should render a 2x4 room with central pillars removed", function () {
     const rows = 2;
-    const columns = 3;
-    // Moves to dig through all internal walls of 2x3 grid
+    const columns = 4;
+    // Moves to dig through all internal walls of 2x4 grid
     const moves = "DDRURDRULLLDRRR";
     const expected =
       "+   +---+---+---+\n" +
@@ -48,6 +48,7 @@ describe("RBT challenge: room creation", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(rows, columns, moves), expected);
   });
 });
+
 
 
 
