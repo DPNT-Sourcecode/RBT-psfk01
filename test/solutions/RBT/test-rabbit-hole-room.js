@@ -22,9 +22,7 @@ describe("RBT challenge: room creation", function () {
     const rows = 3;
     const columns = 3;
     // Moves to dig through all internal walls of 3x3 grid
-    // Snake pattern: D R R D L L D R (row by row, then connect middle)
-    // Then: U R D to connect center
-    const moves = "DRRDLLDRRULURDL";
+    const moves = "DDDRUURDDLLURRULL";
     const expected =
       "+   +---+---+\n" +
       "|           |\n" +
@@ -36,4 +34,5 @@ describe("RBT challenge: room creation", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(rows, columns, moves), expected);
   });
 });
+
 
