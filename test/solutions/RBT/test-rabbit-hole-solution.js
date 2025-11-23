@@ -42,7 +42,7 @@ describe("RBT challenge: draw empty ground", function () {
 describe("RBT_R4: Room to Grow - Scaling", function () {
   it("should render with default scale (3x1)", function () {
     // From the challenge example with default scaling
-    const digging = "DRRURRDLLD";
+    const digging = "DRDLDRRUURDD";
     const expected =
 `+   +---+---+---+
 |       |       |
@@ -57,7 +57,7 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
 
   it("should render with explicit default scale (3x1)", function () {
     // From the challenge example with explicit default scaling
-    const digging = "DRRURRDLLD";
+    const digging = "DRDLDRRUURDD";
     const options = { HORIZONTAL_SCALE: "3", VERTICAL_SCALE: "1" };
     const expected =
 `+   +---+---+---+
@@ -73,7 +73,7 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
 
   it("should render with horizontal scale 6 and vertical scale 2", function () {
     // From the challenge example with 6x2 scaling
-    const digging = "DRRURRDLLD";
+    const digging = "DRDLDRRUURDD";
     const options = { HORIZONTAL_SCALE: "6", VERTICAL_SCALE: "2" };
     const expected =
 `+      +------+------+------+
@@ -121,8 +121,8 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
   });
 
   it("should handle rooms with custom scale", function () {
-    // Create a 2x2 room with custom scale
-    const digging = "DRRD";
+    // Create a 2x2 room with custom scale - need to visit all 4 cells
+    const digging = "DRDLDR";
     const options = { HORIZONTAL_SCALE: "4", VERTICAL_SCALE: "2" };
     const expected =
 `+    +----+
@@ -136,3 +136,4 @@ describe("RBT_R4: Room to Grow - Scaling", function () {
     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
   });
 });
+
