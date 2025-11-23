@@ -240,7 +240,3 @@ describe("RBT_R5: Modernizing the Warren - Unicode Rendering", function () {
 //     assert.equal(new RabbitHoleSolution().rabbit_hole(2, 2, digging, options), expected);
 //   });
 });
-
-
-
-

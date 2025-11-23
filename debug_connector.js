@@ -85,4 +85,3 @@ class DebugSolution extends RabbitHoleSolution {
 }
 
 new DebugSolution().testConnector();
-
